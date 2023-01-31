@@ -1,0 +1,24 @@
+﻿@page "/user"
+@inject NavigationManager Nav
+
+@if(Login.Logado)
+{
+    <h1>Bem Vindo, @Login.User.UserName !</h1>
+
+    <h2>Sobre você</h2>
+
+    <h3>@Login.User.UserAbout</h3>
+
+    <button @onclick="Editar">Editar dados</button>
+}
+
+
+@code {
+
+    public void Editar()
+    {
+        
+       Nav.NavigateTo("/update");
+        
+    }
+}

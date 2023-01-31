@@ -1,0 +1,19 @@
+﻿@page "/"
+@inject NavigationManager Navigation
+
+<h1>Bem vindo</h1>
+
+@if(Login.User.UserName != null)
+{
+    <h1>Olá @Login.User.UserName</h1>
+}
+
+<button @onclick="log">logar</button>
+
+@code {
+
+    private void log()
+    {
+        Navigation.NavigateTo("/login");
+    }
+}

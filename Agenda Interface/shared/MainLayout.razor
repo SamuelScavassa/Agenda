@@ -1,0 +1,32 @@
+﻿@inherits LayoutComponentBase
+
+<main>
+    @if (Pages.Login.Logado)
+    {
+        <header>
+            <div>
+                <div>
+                    <button>Adcionar nota (^///^)</button>
+
+                    <button>Vizualizar suas notas</button>
+                </div>
+            
+                <div>
+                   <input type="search" @bind-value="Busca" placeholder="Escrito">
+                   <button type="button">🔍</button>
+                </div>
+
+            </div>
+        </header>
+    }
+
+    @Body
+</main>
+
+@code {
+    public string Busca { get; set; }
+
+
+
+
+}

@@ -1,0 +1,61 @@
+﻿@page "/login"
+@inject NavigationManager Navigation
+@inject HttpClient Http
+<PageTitle>Login</PageTitle>
+
+<div class="container">
+    <form>
+        <h1>Login</h1>
+        <div class="form-group">
+            <input @bind="Email" type="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <input @bind="Senha" type="password" placeholder="Senha" required>
+        </div>
+        <button type="button" @onclick="Logar">Entrar</button>
+    </form>
+</div>
+
+@code {
+
+    private string Email { get; set; }
+
+    private string Senha { get; set; }
+
+    public static Usuario User { get; set; } = new Usuario();
+
+    public static bool Logado { get; set; } = false;
+
+    private async Task Logar()
+    {
+        var response = await Http.PostAsJsonAsync("/user/Login", new LoginDTO { Email = Email, Senha = Senha });
+        if (response.IsSuccessStatusCode)
+        {
+            var usr = await response.Content.ReadFromJsonAsync<Usuario>();
+            if (usr != null)
+            {
+                User = usr;
+                Logado = true;
+            }
+            Navigation.NavigateTo("/user");
+        }
+        else
+            Navigation.NavigateTo("/cadastro");
+    }
+
+
+    public class LoginDTO
+    {
+        public string Email { get; set; }
+        public string Senha { get; set; }   
+    }
+
+    public class Usuario
+    {
+        public int UserId { get; set; }
+        public string UserName { get; set; }
+        public string UserEmail { get; set; }
+        public string UserPassword { get; set; }
+        public string UserAbout { get; set; }
+    }
+}
