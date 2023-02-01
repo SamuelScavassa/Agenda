@@ -1,0 +1,66 @@
+@page "/cadastro"
+@inject NavigationManager Nav
+@inject HttpClient Http
+@inject IJSRuntime Js
+
+<PageTitle>Cadastro</PageTitle>
+
+<div class="item">
+    <h1> - CADASTRO - </h1>
+    <form class="container">
+        <label>Nome</label>
+        <br>
+        <input @bind="UserName" type="text" class="input">
+
+        <br><br>
+
+        <label>Email</label>
+        <input @bind="UserEmail" type="email" class="input">
+
+        <br><br>
+
+        <label>Senha</label>
+        <input @bind="UserPassword" type="password" class="input">
+
+        <label>Repita sua senha</label>
+        <input @bind="UserPasswordDois" type="password" class="input">
+
+        <br><br>
+
+        <button type="button" @onclick="Create" class="btn">Cadastrar</button>
+    </form>
+</div>
+
+
+
+@code {
+    private string UserName { get; set; }
+    private string UserEmail { get; set; }
+    private string UserPassword { get; set; }
+    private string UserPasswordDois { get; set; }
+
+    private async Task Create()
+    {
+
+        bool senha = await Js.InvokeAsync<bool>("validarSenha", UserPassword, UserPasswordDois);
+        if (senha == true)
+        {
+            var response = await Http.PostAsJsonAsync("/user/New", new Login.Login.Usuario
+                {
+                    UserId = 0,
+                    UserName = UserName,
+                    UserEmail = UserEmail,
+                    UserPassword = UserPassword,
+                    UserAbout = "Fale um pouco sobre você, sintase a vontade ^-^ "
+                });
+            if (response.IsSuccessStatusCode)
+            {
+                Nav.NavigateTo("/login");
+            }
+            else
+            {
+                Nav.NavigateTo("/cadastro");
+            }
+        }
+    }
+}

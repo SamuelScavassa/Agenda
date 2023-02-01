@@ -36,6 +36,19 @@ public class AnnotationController : ControllerBase
         return Ok(lista);
     }
 
+    [HttpGet]
+    [Route("ultimaAnot")]
+    public ActionResult Last(int IdUser)
+    {
+        List<Annotation> lista = new List<Annotation>();
+        foreach (var item in db.Annotations)
+        {
+            if (item.UserId == IdUser)
+                lista.Add(item);
+        }
+        return Ok(lista.Last());
+    }
+
     [HttpPost]
     [Route("getAnnotation")]
     public ActionResult Anotacao(Annotation AnnotationDTO)

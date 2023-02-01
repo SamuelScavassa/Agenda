@@ -1,0 +1,67 @@
+﻿@page "/user"
+@inject NavigationManager Nav
+@inject HttpClient http
+
+@if (Login.Login.Logado)
+{
+    <div class="conteudo">
+        <div class="dados_user">
+            <h2>@Login.Login.User.UserName</h2>
+            <br><br>
+            <h3>
+                @Login.Login.User.UserAbout
+            </h3>
+            <br><br><br>
+            <button class="btn" @onclick="Editar">Editar dados</button>
+            <br><br><br>
+            <button class="btn" @onclick="Sair">Sair</button>
+        </div>
+
+        <div class="ultima_nota">
+            <h2>Ultima nota 📝</h2>
+            <br><br>
+            <div>
+                <br><br>
+                <p>
+                    @UltimaNota
+                </p>
+            </div>
+        </div>
+    </div>
+}
+
+
+@code {
+
+    private string UltimaNota { get; set; } = "";
+    private void Editar()
+    {
+        Nav.NavigateTo("/update");
+    }
+    private void Sair()
+    {
+        Nav.NavigateTo("/", forceLoad:true);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await http.GetFromJsonAsync<Anotacao>($"/Annotation/ultimaAnot?IdUser={Login.Login.User.UserId}");
+        if (response.Text == "")
+        {
+            UltimaNota = "Você ainda não anotou nada ;-;";
+        }
+        else
+            UltimaNota = response.Text;
+    }
+
+    public class Anotacao
+    {
+    
+        public int AnnotationId { get; set; }
+        public int UserId { get; set; }
+        public string Text { get; set; }
+        public bool Conclusion { get; set; }
+        
+    }
+
+}

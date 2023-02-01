@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BlhbND87yvMWuhXEZfjlaYSaYsa9EbbQp+7foMAj88ce9GvZnwDE3vJy5zzbEXxHSl4sJcyabTIOFvIcqBybQw==",
+  "dgSpecHash": "TODOdNVGUUzMrrTYToVtQLDLCj8/vibo0HIHZzqlNPh2BYTxqjH01nl0QZHBTE4v2NxFUaZm/ABs8Jya+wTYYA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\meleg\\OneDrive\\Área de Trabalho\\Agenda\\AppAgendaAPI\\AppAgendaAPI.csproj",
+  "projectFilePath": "D:\\Blazor\\Agenda\\AppAgendaAPI\\AppAgendaAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\meleg\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\meleg\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

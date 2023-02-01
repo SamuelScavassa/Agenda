@@ -3,9 +3,9 @@
 
 <h1>Bem vindo</h1>
 
-@if(Login.User.UserName != null)
+@if(Login.Login.User.UserName != null)
 {
-    <h1>Olá @Login.User.UserName</h1>
+    <h1>Olá @Login.Login.User.UserName</h1>
 }
 
 <button @onclick="log">logar</button>

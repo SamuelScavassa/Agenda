@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\meleg\\OneDrive\\Área de Trabalho\\Agenda\\Agenda Interface\\Agenda Interface.csproj": {}
+    "D:\\Blazor\\Agenda\\Agenda Interface\\Agenda Interface.csproj": {}
   },
   "projects": {
-    "C:\\Users\\meleg\\OneDrive\\Área de Trabalho\\Agenda\\Agenda Interface\\Agenda Interface.csproj": {
+    "D:\\Blazor\\Agenda\\Agenda Interface\\Agenda Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\meleg\\OneDrive\\Área de Trabalho\\Agenda\\Agenda Interface\\Agenda Interface.csproj",
+        "projectUniqueName": "D:\\Blazor\\Agenda\\Agenda Interface\\Agenda Interface.csproj",
         "projectName": "Agenda Interface",
-        "projectPath": "C:\\Users\\meleg\\OneDrive\\Área de Trabalho\\Agenda\\Agenda Interface\\Agenda Interface.csproj",
+        "projectPath": "D:\\Blazor\\Agenda\\Agenda Interface\\Agenda Interface.csproj",
         "packagesPath": "C:\\Users\\meleg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\meleg\\OneDrive\\Área de Trabalho\\Agenda\\Agenda Interface\\obj\\",
+        "outputPath": "D:\\Blazor\\Agenda\\Agenda Interface\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\meleg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

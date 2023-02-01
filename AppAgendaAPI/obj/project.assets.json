@@ -2423,24 +2423,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\meleg\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\meleg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\meleg\\OneDrive\\Área de Trabalho\\Agenda\\AppAgendaAPI\\AppAgendaAPI.csproj",
+      "projectUniqueName": "D:\\Blazor\\Agenda\\AppAgendaAPI\\AppAgendaAPI.csproj",
       "projectName": "AppAgendaAPI",
-      "projectPath": "C:\\Users\\meleg\\OneDrive\\Área de Trabalho\\Agenda\\AppAgendaAPI\\AppAgendaAPI.csproj",
+      "projectPath": "D:\\Blazor\\Agenda\\AppAgendaAPI\\AppAgendaAPI.csproj",
       "packagesPath": "C:\\Users\\meleg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\meleg\\OneDrive\\Área de Trabalho\\Agenda\\AppAgendaAPI\\obj\\",
+      "outputPath": "D:\\Blazor\\Agenda\\AppAgendaAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\meleg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k30tFMceMKZytQSl+O7mLeUSDBOgAXAw4rvDkmWLfJKLihVXCsUWV1+Z46aGV7TY3B9RefxN30NbH2c4nK30OA==",
+  "dgSpecHash": "4HCGa3Zt0DeoswERaSmGN3LEcQ8fgtzlALaUqp37uHHuSgV1PReXdGnbKnLngvcTPgW/34RYgq6qrBU/0I7Rgw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\meleg\\OneDrive\\Área de Trabalho\\Agenda\\Agenda Interface\\Agenda Interface.csproj",
+  "projectFilePath": "D:\\Blazor\\Agenda\\Agenda Interface\\Agenda Interface.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\meleg\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.2\\microsoft.aspnetcore.authorization.7.0.2.nupkg.sha512",
     "C:\\Users\\meleg\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.2\\microsoft.aspnetcore.components.7.0.2.nupkg.sha512",

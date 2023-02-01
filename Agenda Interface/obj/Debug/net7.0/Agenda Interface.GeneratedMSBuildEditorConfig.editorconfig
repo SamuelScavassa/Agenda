@@ -9,37 +9,45 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = Agenda_Interface
 build_property.RootNamespace = Agenda_Interface
-build_property.ProjectDir = c:\Users\meleg\OneDrive\Área de Trabalho\Agenda\Agenda Interface\
+build_property.ProjectDir = d:\Blazor\Agenda\Agenda Interface\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\meleg\OneDrive\Área de Trabalho\Agenda\Agenda Interface
+build_property.MSBuildProjectDirectory = d:\Blazor\Agenda\Agenda Interface
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/meleg/OneDrive/Área de Trabalho/Agenda/Agenda Interface/App.razor]
+[d:/Blazor/Agenda/Agenda Interface/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/meleg/OneDrive/Área de Trabalho/Agenda/Agenda Interface/Pages/Cadastro.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FkYXN0cm8ucmF6b3I=
+[d:/Blazor/Agenda/Agenda Interface/Pages/AddNota.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkTm90YS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/meleg/OneDrive/Área de Trabalho/Agenda/Agenda Interface/Pages/Index.razor]
+[d:/Blazor/Agenda/Agenda Interface/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/meleg/OneDrive/Área de Trabalho/Agenda/Agenda Interface/Pages/Login.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+[d:/Blazor/Agenda/Agenda Interface/Pages/Notes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/meleg/OneDrive/Área de Trabalho/Agenda/Agenda Interface/Pages/User.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/meleg/OneDrive/Área de Trabalho/Agenda/Agenda Interface/shared/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = c2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/meleg/OneDrive/Área de Trabalho/Agenda/Agenda Interface/_Imports.razor]
+[d:/Blazor/Agenda/Agenda Interface/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Blazor/Agenda/Agenda Interface/Pages/Cadastro/Cadastro.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FkYXN0cm9cQ2FkYXN0cm8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ur7b88iggr
+
+[d:/Blazor/Agenda/Agenda Interface/Pages/Login/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-09nmhi7nzu
+
+[d:/Blazor/Agenda/Agenda Interface/Pages/User/User.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxVc2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-g3hke0m42z
+
+[d:/Blazor/Agenda/Agenda Interface/shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = c2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-s5u34ck8tl

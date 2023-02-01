@@ -1,0 +1,42 @@
+.nav-bar {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url("https://images.unsplash.com/photo-1533134486753-c833f0ed4866?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWluaW1hbGlzdCUyMGJsYWNrfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-logo{
+    display: flex;
+    align-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+}
+
+.logo {
+    height: 3.5em;
+}
+
+.espaco{
+    padding: 0% 35%;
+}
+
+.div-buttons{
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.btn {
+    padding: 0.5em;
+    background-color: black;
+    border: 0px;
+    color: white;
+    font-size: 1em;
+    border: 0.0015em solid white;
+}

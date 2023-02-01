@@ -1,31 +1,75 @@
 ﻿@inherits LayoutComponentBase
-
-<main>
-    @if (Pages.Login.Logado)
+@inject NavigationManager Nav
+<link href="Agenda_Interface.razor.css" rel="stylesheet">
+<header class="nav-bar">
+    @if (Pages.Login.Login.Logado)
     {
-        <header>
-            <div>
-                <div>
-                    <button>Adcionar nota (^///^)</button>
+        <a href="/user" style="text-decoration: none;">
+            <div class="div-logo">
 
-                    <button>Vizualizar suas notas</button>
-                </div>
-            
-                <div>
-                   <input type="search" @bind-value="Busca" placeholder="Escrito">
-                   <button type="button">🔍</button>
-                </div>
+                <img src="/IMG/logo.ico" class="logo">
+                <h2>AGENDA</h2>
 
             </div>
-        </header>
+        </a>
+    }
+    else
+    {
+        <a href="#" style="text-decoration: none;">
+            <div class="div-logo">
+
+                <img src="/IMG/logo.ico" class="logo">
+                <h2>AGENDA</h2>
+
+            </div>
+        </a>
     }
 
+    <div class="espaco">
+    </div>
+
+    @if (Pages.Login.Login.Logado)
+    {
+        <div class="div-buttons">
+            <button class="btn" type="button" @onclick="add">ANOTAR</button>
+            <button class="btn" type="button" @onclick="Notes">NOTES</button>
+        </div>
+    }
+    else
+    {
+        <div class="div-buttons">
+            <button class="btn" type="button" @onclick="navLog">LOGIN</button>
+            <button class="btn" type="button" @onclick="create">REGISTRAR-SE</button>
+        </div>
+    }
+
+</header>
+<main>
     @Body
 </main>
 
 @code {
-    public string Busca { get; set; }
+    private string Busca { get; set; }
 
+    private void navLog()
+    {
+        Nav.NavigateTo("/login");
+    }
+
+    private void create()
+    {
+        Nav.NavigateTo("/cadastro");
+    }
+
+    private void add()
+    {
+        Nav.NavigateTo("/addNota");
+    }
+
+    private void Notes()
+    {
+        Nav.NavigateTo("/notes");
+    }
 
 
 
