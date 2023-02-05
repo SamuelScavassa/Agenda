@@ -9,39 +9,39 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -1968123250,
+        "HashCode": 2075657411,
         "Kind": "Components.Component",
-        "Name": "Agenda_Interface.Pages.User.User",
+        "Name": "Agenda_Interface.App",
         "AssemblyName": "Agenda Interface",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "User"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Agenda_Interface.Pages.User.User",
-          "Common.TypeNamespace": "Agenda_Interface.Pages.User",
-          "Common.TypeNameIdentifier": "User"
+          "Common.TypeName": "Agenda_Interface.App",
+          "Common.TypeNamespace": "Agenda_Interface",
+          "Common.TypeNameIdentifier": "App"
         }
       },
       {
-        "HashCode": 612510245,
+        "HashCode": -43091652,
         "Kind": "Components.Component",
-        "Name": "Agenda_Interface.Pages.User.User",
+        "Name": "Agenda_Interface.App",
         "AssemblyName": "Agenda Interface",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Agenda_Interface.Pages.User.User"
+            "TagName": "Agenda_Interface.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Agenda_Interface.Pages.User.User",
-          "Common.TypeNamespace": "Agenda_Interface.Pages.User",
-          "Common.TypeNameIdentifier": "User",
+          "Common.TypeName": "Agenda_Interface.App",
+          "Common.TypeNamespace": "Agenda_Interface",
+          "Common.TypeNameIdentifier": "App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -116,6 +116,43 @@
           "Common.TypeName": "Agenda_Interface.Pages.Login.Login",
           "Common.TypeNamespace": "Agenda_Interface.Pages.Login",
           "Common.TypeNameIdentifier": "Login",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1968123250,
+        "Kind": "Components.Component",
+        "Name": "Agenda_Interface.Pages.User.User",
+        "AssemblyName": "Agenda Interface",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "User"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Agenda_Interface.Pages.User.User",
+          "Common.TypeNamespace": "Agenda_Interface.Pages.User",
+          "Common.TypeNameIdentifier": "User"
+        }
+      },
+      {
+        "HashCode": 612510245,
+        "Kind": "Components.Component",
+        "Name": "Agenda_Interface.Pages.User.User",
+        "AssemblyName": "Agenda Interface",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Agenda_Interface.Pages.User.User"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Agenda_Interface.Pages.User.User",
+          "Common.TypeNamespace": "Agenda_Interface.Pages.User",
+          "Common.TypeNameIdentifier": "User",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -227,43 +264,6 @@
           "Common.TypeName": "Agenda_Interface.Pages.Index",
           "Common.TypeNamespace": "Agenda_Interface.Pages",
           "Common.TypeNameIdentifier": "Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 2075657411,
-        "Kind": "Components.Component",
-        "Name": "Agenda_Interface.App",
-        "AssemblyName": "Agenda Interface",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Agenda_Interface.App",
-          "Common.TypeNamespace": "Agenda_Interface",
-          "Common.TypeNameIdentifier": "App"
-        }
-      },
-      {
-        "HashCode": -43091652,
-        "Kind": "Components.Component",
-        "Name": "Agenda_Interface.App",
-        "AssemblyName": "Agenda Interface",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Agenda_Interface.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Agenda_Interface.App",
-          "Common.TypeNamespace": "Agenda_Interface",
-          "Common.TypeNameIdentifier": "App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
