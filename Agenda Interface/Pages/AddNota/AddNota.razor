@@ -1,0 +1,67 @@
+@page "/addNota"
+@inject IJSRuntime Js
+@inject NavigationManager Nav
+@inject HttpClient http
+
+<PageTitle>Nota</PageTitle>
+
+@if (Login.Login.Logado)
+{
+    <br><br>
+    <div class="container">
+        <div class="botoes">
+            <button @onclick="normal" class="btn">Normal</button>
+            <button @onclick="bold" class="btn">Negrito</button>
+            <button @onclick="italic" class="btn">Itálico</button>
+        </div>
+
+        <br><br>
+        <form>
+            <div class="area">
+                <textarea contenteditable="true" id="text-area" class="area-texto" cols="100" rows="20"
+                @bind="Texto"></textarea>
+            </div>
+
+            <button @onclick="Criar" class="btn">Criar</button>
+        </form>
+    </div>
+
+}
+
+@code {
+    private string Texto { get; set; }
+    private IJSObjectReference module;
+    protected override async void OnInitialized()
+    {
+        module = await Js.InvokeAsync<IJSObjectReference>("import", "./scripts/notas.js");
+    }
+
+    private async void bold()
+    {
+        await module.InvokeVoidAsync("bold");
+    }
+
+    private async void italic()
+    {
+        await module.InvokeVoidAsync("italic");
+    }
+    private async void normal()
+    {
+        await module.InvokeVoidAsync("normal");
+    }
+
+    private async void Criar()
+    {
+        var AnnotationDTO = new Pages.User.User.Anotacao
+            {
+                AnnotationId = 0,
+                UserId = Pages.Login.Login.User.UserId,
+                Text = Texto,
+                Conclusion = true
+            };
+
+        http.PostAsJsonAsync<Pages.User.User.Anotacao>("/Annotation", AnnotationDTO);
+        Nav.NavigateTo("/user");
+        
+    }
+}

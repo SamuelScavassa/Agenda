@@ -33,7 +33,7 @@
 
 @code {
 
-    private string UltimaNota { get; set; } = "";
+    private string UltimaNota { get; set; } 
     private void Editar()
     {
         Nav.NavigateTo("/update");
@@ -46,7 +46,7 @@
     protected override async Task OnInitializedAsync()
     {
         var response = await http.GetFromJsonAsync<Anotacao>($"/Annotation/ultimaAnot?IdUser={Login.Login.User.UserId}");
-        if (response.Text == "")
+        if (response == null || response.Text == default)
         {
             UltimaNota = "Você ainda não anotou nada ;-;";
         }

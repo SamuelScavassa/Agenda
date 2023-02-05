@@ -1,0 +1,34 @@
+.area{
+    padding: 1.5%;
+    margin: 1.5%;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.area-texto{
+    resize: none;
+    border: 1px solid white;
+    background: none;
+}
+
+.btn{
+    margin: 1.5%;
+    padding: 1.5%;
+    font-size: 1.25em;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5%;
+}

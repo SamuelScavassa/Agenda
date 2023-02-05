@@ -20,10 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Blazor/Agenda/Agenda Interface/Pages/AddNota.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkTm90YS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [d:/Blazor/Agenda/Agenda Interface/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -35,6 +31,10 @@ build_metadata.AdditionalFiles.CssScope =
 [d:/Blazor/Agenda/Agenda Interface/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Blazor/Agenda/Agenda Interface/Pages/AddNota/AddNota.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkTm90YVxBZGROb3RhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-1b6vqqls4h
 
 [d:/Blazor/Agenda/Agenda Interface/Pages/Cadastro/Cadastro.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FkYXN0cm9cQ2FkYXN0cm8ucmF6b3I=

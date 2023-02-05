@@ -20,10 +20,10 @@
         <br><br>
 
         <label>Senha</label>
-        <input @bind="UserPassword" type="password" class="input">
+        <input @bind="UserPassword" type="password" class="input" id="cadastroSenhaUm">
 
         <label>Repita sua senha</label>
-        <input @bind="UserPasswordDois" type="password" class="input">
+        <input @bind="UserPasswordDois" type="password" class="input" id="cadastroSenhaDois">
 
         <br><br>
 
@@ -39,10 +39,17 @@
     private string UserPassword { get; set; }
     private string UserPasswordDois { get; set; }
 
+    private IJSObjectReference module;
+
+    protected override async void OnInitialized()
+    {
+        module = await Js.InvokeAsync<IJSObjectReference>("import", "./scripts/cadastro.js");
+    }
+
     private async Task Create()
     {
 
-        bool senha = await Js.InvokeAsync<bool>("validarSenha", UserPassword, UserPasswordDois);
+        bool senha = await module.InvokeAsync<bool>("validarSenha");
         if (senha == true)
         {
             var response = await Http.PostAsJsonAsync("/user/New", new Login.Login.Usuario
