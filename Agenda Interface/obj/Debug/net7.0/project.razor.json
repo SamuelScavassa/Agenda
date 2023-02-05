@@ -194,43 +194,6 @@
         }
       },
       {
-        "HashCode": 1835815046,
-        "Kind": "Components.Component",
-        "Name": "Agenda_Interface.Pages.Notes",
-        "AssemblyName": "Agenda Interface",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Notes"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Agenda_Interface.Pages.Notes",
-          "Common.TypeNamespace": "Agenda_Interface.Pages",
-          "Common.TypeNameIdentifier": "Notes"
-        }
-      },
-      {
-        "HashCode": -886395062,
-        "Kind": "Components.Component",
-        "Name": "Agenda_Interface.Pages.Notes",
-        "AssemblyName": "Agenda Interface",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Agenda_Interface.Pages.Notes"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Agenda_Interface.Pages.Notes",
-          "Common.TypeNamespace": "Agenda_Interface.Pages",
-          "Common.TypeNameIdentifier": "Notes",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1224840902,
         "Kind": "Components.Component",
         "Name": "Agenda_Interface.Pages.Index",
@@ -264,6 +227,43 @@
           "Common.TypeName": "Agenda_Interface.Pages.Index",
           "Common.TypeNamespace": "Agenda_Interface.Pages",
           "Common.TypeNameIdentifier": "Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1835815046,
+        "Kind": "Components.Component",
+        "Name": "Agenda_Interface.Pages.Notes",
+        "AssemblyName": "Agenda Interface",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Notes"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Agenda_Interface.Pages.Notes",
+          "Common.TypeNamespace": "Agenda_Interface.Pages",
+          "Common.TypeNameIdentifier": "Notes"
+        }
+      },
+      {
+        "HashCode": -886395062,
+        "Kind": "Components.Component",
+        "Name": "Agenda_Interface.Pages.Notes",
+        "AssemblyName": "Agenda Interface",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Agenda_Interface.Pages.Notes"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Agenda_Interface.Pages.Notes",
+          "Common.TypeNamespace": "Agenda_Interface.Pages",
+          "Common.TypeNameIdentifier": "Notes",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
