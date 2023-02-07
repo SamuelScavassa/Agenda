@@ -1,6 +1,8 @@
 ﻿@page "/login"
 @inject NavigationManager Navigation
 @inject HttpClient Http
+@using Models
+
 <PageTitle>Login</PageTitle>
 
 <div class="item">
@@ -23,45 +25,37 @@
 </div>
 
 @code {
-
     private string Email { get; set; }
-
     private string Senha { get; set; }
-
-    public static Usuario User { get; set; } = new Usuario();
-
     public static bool Logado { get; set; } = false;
-
+    public static User Usuario { get; set; } = new User();
+    public static string Token { get; set; }
     private async Task Logar()
     {
-        var response = await Http.PostAsJsonAsync("/user/Login", new LoginDTO { Email = Email, Senha = Senha });
-        if (response.IsSuccessStatusCode)
-        {
-            var usr = await response.Content.ReadFromJsonAsync<Usuario>();
-            if (usr != null)
+
+        var response = await Http.PostAsJsonAsync("/login", new User
             {
-                User = usr;
-                Logado = true;
-            }
+                UserId = 0,
+                UserName = "string",
+                UserEmail = Email,
+                UserPassword = Senha,
+                UserAbout = "string"
+            });
+
+        if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+        {
+            Navigation.NavigateTo("/cadastro");
+        }
+        var resultado = await response.Content.ReadFromJsonAsync<ResponseLogin>();
+        if (resultado != null)
+        {
+            Usuario = resultado.User;
+            Token = resultado.Token;
+            Logado = true;
             Navigation.NavigateTo("/user");
         }
-        else
-            Navigation.NavigateTo("/cadastro");
     }
 
-
-    public class LoginDTO
-    {
-        public string Email { get; set; }
-        public string Senha { get; set; }
-    }
-
-    public class Usuario
-    {
-        public int UserId { get; set; }
-        public string UserName { get; set; }
-        public string UserEmail { get; set; }
-        public string UserPassword { get; set; }
-        public string UserAbout { get; set; }
-    }
 }
+
+

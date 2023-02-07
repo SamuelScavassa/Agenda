@@ -30,7 +30,7 @@
 
 @code {
     private string Texto { get; set; }
-    private IJSObjectReference module;
+    private static IJSObjectReference module;
     protected override async void OnInitialized()
     {
         module = await Js.InvokeAsync<IJSObjectReference>("import", "./scripts/notas.js");
@@ -50,17 +50,18 @@
         await module.InvokeVoidAsync("normal");
     }
 
-    private async void Criar()
+    private async Task Criar()
     {
-        var AnnotationDTO = new Pages.User.User.Anotacao
+        var AnnotationDTO = new Models.Annotation
             {
                 AnnotationId = 0,
-                UserId = Pages.Login.Login.User.UserId,
+                UserId = Login.Login.Usuario.UserId,
                 Text = Texto,
                 Conclusion = true
             };
 
-        http.PostAsJsonAsync<Pages.User.User.Anotacao>("/Annotation", AnnotationDTO);
+        http.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Login.Login.Token);
+        http.PostAsJsonAsync<Models.Annotation>("/Annotation/add", AnnotationDTO);
         Nav.NavigateTo("/user");
         
     }

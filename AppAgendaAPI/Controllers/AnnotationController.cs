@@ -1,10 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using AppAgendaAPI.Models;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
-
+using Microsoft.AspNetCore.Authorization;
 namespace AppAgendaAPI.Controllers;
-
 [ApiController]
 [Route("Annotation")]
 public class AnnotationController : ControllerBase
@@ -16,6 +13,8 @@ public class AnnotationController : ControllerBase
     }
 
     [HttpPost]
+    [Route("add")]
+    [Authorize(Roles = "adm")]
     public ActionResult Create(Annotation Anot)
     {
         db.Annotations.Add(Anot);
@@ -25,6 +24,7 @@ public class AnnotationController : ControllerBase
 
     [HttpGet]
     [Route("lista")]
+    [Authorize(Roles = "adm")]
     public ActionResult Lista(int IdUser)
     {
         List<Annotation> lista = new List<Annotation>();
@@ -38,6 +38,7 @@ public class AnnotationController : ControllerBase
 
     [HttpGet]
     [Route("ultimaAnot")]
+    [Authorize(Roles = "adm")]
     public ActionResult Last(int IdUser)
     {
         List<Annotation> lista = new List<Annotation>();
@@ -48,21 +49,4 @@ public class AnnotationController : ControllerBase
         }
         return Ok(lista.Last());
     }
-
-    [HttpPost]
-    [Route("getAnnotation")]
-    public ActionResult Anotacao(Annotation AnnotationDTO)
-    {
-        var anot = db.Annotations.FirstOrDefault(x=>x.AnnotationId == AnnotationDTO.AnnotationId && x.UserId == AnnotationDTO.UserId);
-        if (anot == default)
-        {
-            return NotFound();
-        }
-        return Ok(anot);
-    }
-
-
-
-    
-
 }

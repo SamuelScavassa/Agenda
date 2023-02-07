@@ -1,15 +1,16 @@
 ﻿@page "/user"
 @inject NavigationManager Nav
 @inject HttpClient http
+@using Models
 
 @if (Login.Login.Logado)
 {
     <div class="conteudo">
         <div class="dados_user">
-            <h2>@Login.Login.User.UserName</h2>
+            <h2>@Login.Login.Usuario.UserName</h2>
             <br><br>
             <h3>
-                @Login.Login.User.UserAbout
+                @Login.Login.Usuario.UserAbout
             </h3>
             <br><br><br>
             <button class="btn" @onclick="Editar">Editar dados</button>
@@ -32,36 +33,23 @@
 
 
 @code {
-
-    private string UltimaNota { get; set; } 
+    private string UltimaNota { get; set; }
     private void Editar()
     {
         Nav.NavigateTo("/update");
     }
     private void Sair()
     {
-        Nav.NavigateTo("/", forceLoad:true);
+        Nav.NavigateTo("/", forceLoad: true);
     }
 
     protected override async Task OnInitializedAsync()
     {
-        var response = await http.GetFromJsonAsync<Anotacao>($"/Annotation/ultimaAnot?IdUser={Login.Login.User.UserId}");
-        if (response == null || response.Text == default)
-        {
-            UltimaNota = "Você ainda não anotou nada ;-;";
-        }
-        else
-            UltimaNota = response.Text;
+        http.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Login.Login.Token);
+        var response = await http.GetFromJsonAsync<Annotation>($"/Annotation/ultimaAnot?IdUser={Login.Login.Usuario.UserId}");
+        UltimaNota = response.Text;
     }
 
-    public class Anotacao
-    {
     
-        public int AnnotationId { get; set; }
-        public int UserId { get; set; }
-        public string Text { get; set; }
-        public bool Conclusion { get; set; }
-        
-    }
 
 }

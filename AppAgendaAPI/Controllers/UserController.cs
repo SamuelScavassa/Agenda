@@ -1,11 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using AppAgendaAPI.Models;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Text;
-using System.Text.Json;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AppAgendaAPI.Controllers;
 
@@ -21,9 +16,9 @@ public class UserController : ControllerBase
 
     }
 
-
     [HttpPost]
     [Route("New")]
+    [AllowAnonymous]
     public ActionResult Create(User NewUser)
     {
         var usr = db.Users.FirstOrDefault(x => x.UserEmail == NewUser.UserEmail);
@@ -36,24 +31,9 @@ public class UserController : ControllerBase
         return NotFound("Email já cadastrado");
     }
 
-    [HttpPost]
-    [Route("Login")]
-    public async Task<IActionResult> Login([FromBody] LoginDTO request)
-    {
-        var usr = db.Users.FirstOrDefault(x => x.UserEmail == request.Email && x.UserPassword == request.Senha);
-        // Validate the user credentials
-        if (usr != default)
-        { 
-            return Ok(usr);
-        }
-        else
-        {
-            return BadRequest();
-        }
-    }
-
     [HttpPut]
     [Route("update")]
+    [Authorize(Roles = "adm")]
     public ActionResult Update(User Alter)
     {
         User? usr = db.Users.FirstOrDefault(x => x.UserId == Alter.UserId);
@@ -67,14 +47,8 @@ public class UserController : ControllerBase
         usr.UserAbout = Alter.UserAbout;
         db.SaveChanges();
 
-
         return Ok(usr);
     }
 
 }
 
-public class LoginDTO
-{
-    public string Email { get; set; }
-    public string Senha { get; set; }
-}

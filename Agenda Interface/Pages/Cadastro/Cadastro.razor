@@ -2,6 +2,7 @@
 @inject NavigationManager Nav
 @inject HttpClient Http
 @inject IJSRuntime Js
+@using Models
 
 <PageTitle>Cadastro</PageTitle>
 
@@ -52,7 +53,7 @@
         bool senha = await module.InvokeAsync<bool>("validarSenha");
         if (senha == true)
         {
-            var response = await Http.PostAsJsonAsync("/user/New", new Login.Login.Usuario
+            var response = await Http.PostAsJsonAsync("/user/New", new User
                 {
                     UserId = 0,
                     UserName = UserName,
